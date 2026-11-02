@@ -21,7 +21,8 @@ if (!isset($halaman_aktif)) {
     <title>Laundry Malas Ngoding</title>
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <script src="assets/js/bootstrap.js"></script>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
     <style>
         html, body {
             margin: 0;
@@ -165,6 +166,9 @@ if (!isset($halaman_aktif)) {
                     <a href="ganti_password.php">
                         <i class="bi bi-key-fill"></i> Ganti Password
                     </a>
+                     <a href="sub_user.php">
+                        <i class="bi bi-person-fill"></i> Sub_User
+                    </a>
                 </div>
             </li>
 
@@ -174,7 +178,6 @@ if (!isset($halaman_aktif)) {
         </ul>
 
         <div class="navbar-right">
-            <span>Halo, <strong><?php echo $_SESSION['username']; ?></strong>!</span>
+            <span>Halo, <strong><?php echo htmlspecialchars($_SESSION['username']); ?></strong>!</span>
         </div>
     </nav>
-</body>
